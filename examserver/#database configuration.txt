@@ -1,0 +1,52 @@
+#database configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/exam
+spring.datasource.username=root
+spring.datasource.password=Seema@12
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+#JPA Configuration
+#spring.jpa.database-platform = org.hibernate.dialect.MySQL8Dialect
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+
+
+
+
+
+
+#jpa configuration
+spring.jpa.generate-ddl=true
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.format_sql=true
+ #database configuration
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/exam?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=Seema@12
+
+---------------------------
+<div class="bootstrap-wrapper">
+	<div class="container">
+        <h1>WELCOME TO TESTYOURSELF</h1>
+		<div class="row">
+			<div class="col-md-6">
+                <h1>LEFTSIDE</h1>
+            </div>
+            <div class="col-md-6">
+                <<h1>RIGHTSIDE</h1>
+            </div>
+        </div>
+	</div>
+</div> 
+-----------------------------------------
+
+Note 
+comment delet ctrl+/
+multi cursior alt+cursor
+ 
