@@ -1,9 +1,17 @@
 package com.exam;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import com.exam.entity.Role;
+import com.exam.entity.UserRole;
+import com.exam.entity.Users;
 import com.exam.service.UserService;
 
 @SpringBootApplication
@@ -11,6 +19,9 @@ public class ExamserverApplication implements CommandLineRunner {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ExamserverApplication.class, args);
@@ -20,14 +31,14 @@ public class ExamserverApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("starting code");
 
-//		User user = new User();
+//		Users user = new Users();
 //
 //		user.setFristName("Harshit");
 //		user.setLastName("Agarwal");
 //		user.setUsername("h4agarwahll");
-//		user.setPassword("abc");
+//		user.setPassword(this.bCryptPasswordEncoder.encode("abc"));
 //		user.setEmail("h4agarwahll@gmail.com");
-//		user.setProfile("default.png");
+//		user.setProfile("admin.png");
 //
 //		Role role1 = new Role();
 //		role1.setRoleId(44L);
@@ -40,7 +51,7 @@ public class ExamserverApplication implements CommandLineRunner {
 //
 //		userRoleSet.add(userRole);
 //
-//		User user1 = this.userService.createUser(user, userRoleSet);
+//		Users user1 = this.userService.createUser(user, userRoleSet);
 //		System.out.println(user1.getUsername());
 
 	}
